@@ -1,0 +1,186 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*CUSTOM CSS*/
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-darkblue:hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-lightgray: hsl(0, 0%, 98%);
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    width:90%;
+    margin: 0 auto;
+    font-size: 15px;
+    background:var(--very-lightgray);
+}
+.wrapper{
+    margin-top:5rem;
+    margin-bottom:5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+.title{
+    text-align:center;
+    width:340px;
+}
+.title>p{
+    margin-top: 1rem;
+}
+.thin{
+    font-weight:lighter;
+    color: var(--very-darkblue);
+}
+.bold{
+    font-weight: 600;
+    color: var(--very-darkblue);
+}
+.thin-p{
+    color: var(--grayish-blue);
+    font-weight: 200;
+}
+.box{
+    width:340px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    padding:2rem;
+    background: white;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin-top:0.5rem;
+}
+.box>img{
+    align-self: flex-end;
+    margin-top:1rem;
+}
+.box-cyan{
+    border-top: 4px solid var(--cyan);
+    margin-top:3rem;
+}
+
+.box-red{
+    border-top: 4px solid var(--red);
+}
+.box-orange{
+    border-top: 4px solid var(--orange);
+}
+.box-blue{
+    border-top: 4px solid var(--blue);
+}
+@media screen and (min-width:1440px){
+    .grid{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr 1fr;
+        gap:30px;
+        margin-top:2rem;
+    }
+    .title{
+        width:450px;
+    }
+    .title>.thin{
+        font-size:32px;
+    }
+    .title>.bold{
+        font-size:32px;
+    }
+    .title>.thin-p{
+        font-size:16px;
+    }
+    .box{
+        margin:0;
+    }
+    .box-orange{
+        grid-column: 2/3;
+    }
+    .box-cyan{
+        grid-row: 1/3;
+        align-self: center;
+    }
+    .box-blue{
+        grid-column: 3/-1;
+        grid-row: 1/-1;
+        align-self: center;
+    }
+}
