@@ -127,7 +127,7 @@ body{
     background: white;
     border-top-left-radius:5px;
     border-top-right-radius:5px;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 12px 7px 20px 6px rgb(57 75 84 / 8%);
     margin-top:0.5rem;
 }
 .box>img{
